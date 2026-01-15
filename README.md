@@ -1,7 +1,5 @@
 # TuEs
-- TailwindCSS "aktivieren"
-- Dropdown React Element
-- Von Typescript zu javascript wechseln
+- StatValue Komponente
 - React-Komponente Results Screen
 - React-Komponente Main-Input-Feld
 

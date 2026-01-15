@@ -2,7 +2,7 @@ import { useState, useRef, useEffect } from "react";
 
 function Dropdown({values}) {
     const [collapsed, setCollapsed] = useState(true);
-    const [ddValue, setDdValue] = useState("Easy");
+    const [ddValue, setDdValue] = useState(values[0]);
     const dropdownRef = useRef(null);
 
     useEffect(() => {
