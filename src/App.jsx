@@ -1,3 +1,4 @@
+import completedIconMod from './assets/images/icon-completed-mod.svg'
 
 function App() {
 
