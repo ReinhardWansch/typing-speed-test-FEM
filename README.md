@@ -1,5 +1,5 @@
 # TuEs
-- StatValue Komponente
+- Dropdown styling
 - React-Komponente Results Screen
 - React-Komponente Main-Input-Feld
 

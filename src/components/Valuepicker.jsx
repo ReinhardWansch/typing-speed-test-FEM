@@ -1,6 +1,6 @@
 import { useState, useRef, useEffect } from "react";
 
-function Dropdown({values}) {
+function ValuePicker({values}) {
     const [collapsed, setCollapsed] = useState(true);
     const [ddValue, setDdValue] = useState(values[0]);
     const dropdownRef = useRef(null);
@@ -31,4 +31,4 @@ function Dropdown({values}) {
     );
 }
 
-export default Dropdown;
+export default ValuePicker;
