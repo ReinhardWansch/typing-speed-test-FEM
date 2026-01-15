@@ -1,5 +1,6 @@
 # TuEs
-- Dropdown styling React Element
+- TailwindCSS "aktivieren"
+- Dropdown React Element
 - Von Typescript zu javascript wechseln
 - React-Komponente Results Screen
 - React-Komponente Main-Input-Feld
