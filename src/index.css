@@ -1,0 +1,18 @@
+@import "tailwindcss";
+
+@theme {
+    --color-fem-neutral-900: hsl(0, 0%, 7%);
+    --color-fem-neutral-800: hsl(0, 0%, 15%);
+    --color-fem-neutral-500: hsl(240, 3%, 46%);
+    --color-fem-neutral-400: hsl(240, 1%, 59%);
+    --color-fem-neutral-0: hsl(0, 0%, 100%);
+    /* blue */
+    --color-fem-blue-600: hsl(214, 100%, 55%);
+    --color-fem-blue-400: hsl(210, 100%, 65%);
+    /* red */
+    --color-fem-red-500: hsl(354, 63%, 57%);
+    /* green */
+    --color-fem-green-500: hsl(140, 63%, 57%);
+    /* yellow */
+    --color-fem-yellow-400: hsl(49, 85%, 70%);
+}

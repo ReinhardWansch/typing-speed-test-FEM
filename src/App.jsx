@@ -1,11 +1,11 @@
-import completedIconMod from './assets/images/icon-completed-mod.svg'
+import Header from "./Header"
 
 function App() {
 
   return (
-    <>
-      <h1>Seawas</h1>
-    </>
+    <div id="pageCtn" className="min-h-screen px-2 py-3 bg-neutral-900 text-fem-neutral-0">
+      <Header />
+    </div>
   )
 }
 
