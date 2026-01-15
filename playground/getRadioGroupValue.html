@@ -1,0 +1,26 @@
+<!doctype html>
+<html>
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>temp</title>
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+</head>
+
+<body>
+    <label for="radioEins"><input id="radioEins" type="radio" name="radioGroup" value="eins" /> Eins </label>
+    <label for="radioZwo"><input id="radioZwo" type="radio" name="radioGroup" value="zwo" /> Zwo </label>
+    <label for="radioDrei"><input id="radioDrei" type="radio" name="radioGroup" value="drei" /> Drei </label>
+    <br>
+    <button onclick="tuEs()">Tu Es</button>
+
+    <script>
+        function tuEs() {
+            const radioGroup = document.querySelector('input[name="radioGroup"]:checked');
+            console.log(radioGroup.value);
+        }
+    </script>
+</body>
+
+</html>

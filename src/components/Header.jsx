@@ -1,6 +1,6 @@
-import logoLarge from './assets/images/logo-large.svg'
-import logoSmall from './assets/images/logo-small.svg'
-import iconPersonalBest from './assets/images/icon-personal-best.svg'
+import logoLarge from '../assets/images/logo-large.svg'
+import logoSmall from '../assets/images/logo-small.svg'
+import iconPersonalBest from '../assets/images/icon-personal-best.svg'
 
 function Header({pb}) {
     return (
