@@ -17,17 +17,21 @@ function ValuePicker({ values }) {
     }, []);
 
     return (
-        <div ref={dropdownRef} className="">
+        <div ref={dropdownRef} className="relative flex-1 text-center">
             <p onClick={() => setCollapsed(!collapsed)}
                 className="px-6 border border-fem-neutral-400 rounded-md">
-                {ddValue} 
-                <img src="/src/assets/images/icon-down-arrow.svg" alt="downarrow" className={`inline ${collapsed ? 'pl-2' : 'rotate-180 pr-2'}`} />
+                {ddValue}
+                <img src="/src/assets/images/icon-down-arrow.svg" alt="downarrow"
+                    className={`inline ${collapsed ? 'pl-2' : 'rotate-180 pr-2'}`} />
             </p>
-            <div id="ddMenu" className={collapsed ? 'hidden' : 'flex flex-col gap-2 position absolute'}>
+            <div id="ddMenu"
+                className={collapsed ? 'hidden' : 
+                'flex flex-col rounded-md w-full bg-fem-neutral-800 divide-y divide-neutral-700'}>
                 {values.map(valueI =>
-                    <label key={valueI} htmlFor={valueI} onClick={() => setDdValue(valueI)}>
+                    <label key={valueI} htmlFor={valueI} onClick={() => setDdValue(valueI)}
+                        className="p-2 text-start">
                         <input id={valueI} type="radio" name="difficulty" />
-                        {valueI}
+                        <span className="pl-2">{valueI}</span>
                     </label>)
                 }
             </div>
