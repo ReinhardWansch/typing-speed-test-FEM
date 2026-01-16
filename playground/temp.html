@@ -1,22 +1,35 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>temp</title>
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
     <style>
-        body {
-            padding: 20px;
-        }
-        span {
-            display: inline-block;
-            font-size: 5rem;
-            font-weight: bold;
-            transform: scale(1, -1);
+        input[type="radio"] {
+            /* appearance: none; */
+            /* -webkit-appearance: none; */
+            /* width: 20px; */
+            /* height: 20px; */
+            /* border: 2px solid #ccc; */
+            /* border-radius: 50%; */
+            /* cursor: pointer; */
+            accent-color: blue;
+            /* background-color: transparent; */
         }
     </style>
 </head>
-<body>
-    <span>v</span>
+
+<body class="bg-neutral-600 p-5">
+    <div class="flex flex-col text-white">
+        <label for="radio1">
+            <input id="radio1" type="radio" name="disch">
+            eins
+        </label>
+        <label for=" radio2"><input id="radio2" type="radio" name="disch">zwo</label>
+        <label for="radio3"><input id="radio3" type="radio" name="disch">drei</label>
+    </div>
 </body>
+
 </html>
