@@ -25,7 +25,7 @@ export default function ValuePicker({values}) {
             </p>
             <div id="ddMenu"
                 className={collapsed ? 'hidden' :
-                    'flex flex-col rounded-md w-full bg-fem-neutral-800 divide-y divide-neutral-700'}>
+                    'flex flex-col rounded-md w-full bg-fem-neutral-800 divide-y divide-neutral-700 absolute'}>
                 {values.map(valueI =>
                     <ValuePickerValue text={valueI} checked={selectedValue === valueI} clickHandler={setSelectedValue} key={valueI} />
                 )}
