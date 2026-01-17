@@ -1,4 +1,5 @@
 import { useEffect, useRef, useState } from "react";
+import iconDownArrow from '/src/assets/images/icon-down-arrow.svg';
 
 export default function ValuePicker({values}) {
     const [collapsed, setCollapsed] = useState(true);
@@ -20,7 +21,7 @@ export default function ValuePicker({values}) {
             <p onClick={() => setCollapsed(!collapsed)}
                 className="border border-fem-neutral-400 rounded-md">
                 {selectedValue}
-                <img src="/src/assets/images/icon-down-arrow.svg" alt="downarrow"
+                <img src={iconDownArrow} alt="downarrow"
                     className={`inline ${collapsed ? 'pl-2' : 'rotate-180 pr-2'}`} />
             </p>
             <div id="ddMenu"
