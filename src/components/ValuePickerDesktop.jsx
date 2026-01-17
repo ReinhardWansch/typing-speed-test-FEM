@@ -1,10 +1,10 @@
 import { useState } from "react";
 
-export default function ValuePickerDesktop({ values }) {
+export default function ValuePickerDesktop({ values, className="" }) {
     const [selectedValue, setSelectedValue] = useState(values[0]);
 
     return (
-        <div id="difficultyControlsCtn">
+        <div id="difficultyControlsCtn" className={` ${className}`}>
             <span className="text-fem-neutral-400">Difficulty:</span>
             {values.map(valueI =>
                 <ValuePickerValueDesktop key={valueI} text={valueI} checked={selectedValue === valueI} clickHandler={() => setSelectedValue(valueI)} />

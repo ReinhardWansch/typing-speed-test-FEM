@@ -1,7 +1,7 @@
 import { useEffect, useRef, useState } from "react";
 import iconDownArrow from '/src/assets/images/icon-down-arrow.svg';
 
-export default function ValuePicker({values}) {
+export default function ValuePicker({values, className=""}) {
     const [collapsed, setCollapsed] = useState(true);
     const [selectedValue, setSelectedValue] = useState(values[0]);
     const dropdownRef = useRef(null);
@@ -17,7 +17,8 @@ export default function ValuePicker({values}) {
     }, []);
 
     return (
-        <div ref={dropdownRef} className="relative flex-1 text-center">
+        // <div ref={dropdownRef} className={"relative flex-1 text-center " + className}>
+        <div ref={dropdownRef} className={`relative flex-1 text-center ${className}`}>
             <p onClick={() => setCollapsed(!collapsed)}
                 className="border border-fem-neutral-400 rounded-md">
                 {selectedValue}

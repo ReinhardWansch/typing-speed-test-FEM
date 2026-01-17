@@ -12,11 +12,11 @@ function App() {
     <div id="pageCtn" className="min-h-screen px-2 py-3 bg-neutral-900 text-fem-neutral-0 font-sora">
       <Header pb={92} />
       <div className="flex justify-around gap-2">
-        <ValuePicker values={DIFFICULTY_LEVELS} />
+        <ValuePicker values={DIFFICULTY_LEVELS} className="md:hidden" />
+      <ValuePickerDesktop values={DIFFICULTY_LEVELS} className="hidden md:block"/>
         <ValuePicker values={MODES} />
       </div>
       <StatValueGamescreen name="WPM:" value={40} color="" />
-      <ValuePickerDesktop values={DIFFICULTY_LEVELS} />
     </div>
   )
 }
