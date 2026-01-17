@@ -1,5 +1,3 @@
-import { useState } from 'react';
-
 function ValuePickerCheckmark({ checked = false }) {
     return (
         <div className={"rounded-full w-4 h-4 flex items-center justify-center"+
@@ -16,11 +14,9 @@ function ValuePickerLabel({ text }) {
     )
 }
 
-function ValuePickerValue({text}) {
-    const [checked, setChecked] = useState(false);
-
+function ValuePickerValue({text, checked, clickHandler}) {
     return (
-        <div className="flex items-center gap-2 bg-fem-neutral-800" onClick={() => setChecked(!checked)}>
+        <div className="flex items-center gap-2 bg-fem-neutral-800" onClick={()=>clickHandler(text)}>
             <ValuePickerCheckmark checked={checked} />
             <ValuePickerLabel text={text} />
         </div>

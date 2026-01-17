@@ -1,7 +1,7 @@
 import Header from "./components/Header.jsx"
-import ValuePicker from "./components/Valuepicker.jsx"
-import StatValueGamescreen from "./components/StatValueGamescreen.jsx"
+import ValuePicker from "./components/ValuePicker.jsx"
 import ValuePickerValue from "./components/ValuePickerValue.jsx"
+import StatValueGamescreen from "./components/StatValueGamescreen.jsx"
 
 const DIFFICULTY_LEVELS = ["Easy", "Medium", "Hard"];
 const MODES = ["Timed (60s)", "Passage"];
@@ -16,7 +16,6 @@ function App() {
         <ValuePicker values={MODES} />
       </div>
       <StatValueGamescreen name="WPM:" value={40} color="" />
-      <ValuePickerValue text="Easy" />
     </div>
   )
 }
