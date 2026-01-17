@@ -1,6 +1,5 @@
 import Header from "./components/Header.jsx"
 import ValuePicker from "./components/ValuePicker.jsx"
-import ValuePickerValue from "./components/ValuePickerValue.jsx"
 import StatValueGamescreen from "./components/StatValueGamescreen.jsx"
 
 const DIFFICULTY_LEVELS = ["Easy", "Medium", "Hard"];

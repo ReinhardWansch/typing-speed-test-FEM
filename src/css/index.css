@@ -2,6 +2,10 @@
 @import "./fonts.css";
 
 @theme {
+  --font-sora: "Sora", sans-serif; 
+}
+
+@theme {
     --color-fem-neutral-900: hsl(0, 0%, 7%);
     --color-fem-neutral-800: hsl(0, 0%, 15%);
     --color-fem-neutral-500: hsl(240, 3%, 46%);
@@ -16,8 +20,4 @@
     --color-fem-green-500: hsl(140, 63%, 57%);
     /* yellow */
     --color-fem-yellow-400: hsl(49, 85%, 70%);
-}
-
-@theme {
-  --font-sora: "Sora", sans-serif; 
 }
