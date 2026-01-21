@@ -1,10 +1,36 @@
 # TuEs
-- Dropdown styling
-- React-Komponente Main-Input-Feld
+
 - React-Komponente Results Screen
 
+## Brainstorm
+
+- User kommt auf Seite
+- PB wird angezeigt (**PB laden**)
+  - wenn kein PB, Unendlich Zeichen
+- Schwierigkeitsgrad aussuchen
+  - Passende Passage wird im Typing Feld angezeigt (**Passage laden**)
+- Modus aussuchen
+- Siel starten
+  - Auswahl für Schwierigkeit und Modus wird gesperrt
+  - Bei Modus "Passage" wird Time ausgeblendet
+- Buchstabe tippen
+    - getippter Buchstabe wird grün oder rot markiert
+    - nächster Buchstabe wird markiert
+    - WPM wird neu berechnet
+    - Accuracy wird neu berechnet
+    - wenn letzter Buchstabe:
+      - WPM in Highscores speichern
+      - Typing-Handler entfernen
+      - Results anzeigen
+- Results Screen anzeigen
+  - Wenn PB: Highscore neu laden (damit im Header das aktuelle PB angezeigt wird)
+  - Icon, Text und Decals anhand von Highscores anzeigen
 
 
+
+
+
+---
 
 # Frontend Mentor - Typing Speed Test
 
