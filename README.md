@@ -1,6 +1,11 @@
 # TuEs
 
-- TypingInput ad GameSreen *aktuell*
+- Bei Start: Zufällige Passage (nach Schwierigkeitsgrad) laden
+- Bei Schwierigkeits-Änderung: Neue Passage laden
+- Spielstart
+  - Bei Gamemode "Timed" Timer starten
+- Spielende
+- Restart Button in GameScreen
 
 # Brainstorm
 
@@ -17,7 +22,7 @@
     - nächster Buchstabe wird markiert
     - WPM wird neu berechnet
     - Accuracy wird neu berechnet
-    - wenn letzter Buchstabe:
+    - wenn letzter Buchstabe (oder Zeit abgelaufen):
       - WPM in Highscores speichern
       - Typing-Handler entfernen
       - Results anzeigen
