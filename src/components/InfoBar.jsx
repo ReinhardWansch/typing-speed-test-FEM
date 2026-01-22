@@ -10,8 +10,6 @@ const EASY= settings.DIFFICULTY_LEVELS.EASY
 const MEDIUM= settings.DIFFICULTY_LEVELS.MEDIUM
 const HARD= settings.DIFFICULTY_LEVELS.HARD
 
-console.log(DIFFICULTY_LEVELS); ///DEBUG
-
 export default function InfoBar({ wpm, accuracy, time }) {
     return (
         <div id="infoBar" className="pt-10 pb-2 flex flex-col lg:flex-row lg:justify-between gap-1">
@@ -26,7 +24,9 @@ export default function InfoBar({ wpm, accuracy, time }) {
             {/****** Controls Ctn ******/}
             <div id="controlsCtn" className="flex justify-center items-center gap-5">
                 <ValuePicker className="lg:hidden" values={Object.values(DIFFICULTY_LEVELS)} />
-                <ValuePickerDesktop className="hidden lg:flex" values={["Hard", "Easy", "Medium"]} />
+                <ValuePickerDesktop className="hidden lg:flex" values={Object.values(DIFFICULTY_LEVELS)} />
+                
+                <ValuePicker values={["Timed", "Passage"]} />
 
             </div>
         </div>

@@ -12,7 +12,7 @@ export default {
         HARD: { value: 2, label: "Hard" }
     },
 
-    MODES: {
+    GAME_MODES: {
         TIMED: 0, /* Timed (60s) */
         PASSAGE: 1 /* Passage */
     },
