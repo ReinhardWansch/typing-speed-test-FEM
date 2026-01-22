@@ -1,3 +1,4 @@
+import settings from '../settings.js';
 import { useEffect, useRef, useState } from "react";
 import iconDownArrow from '/src/assets/images/icon-down-arrow.svg';
 
@@ -17,11 +18,10 @@ export default function ValuePicker({values, className=""}) {
     }, []);
 
     return (
-        // <div ref={dropdownRef} className={"relative flex-1 text-center " + className}>
         <div ref={dropdownRef} className={`relative flex-1 text-center ${className}`}>
             <p onClick={() => setCollapsed(!collapsed)}
                 className="border border-fem-neutral-400 rounded-md">
-                {selectedValue}
+                {selectedValue.label}
                 <img src={iconDownArrow} alt="downarrow"
                     className={`inline ${collapsed ? 'pl-2' : 'rotate-180 pr-2'}`} />
             </p>
@@ -37,6 +37,14 @@ export default function ValuePicker({values, className=""}) {
 }
 
 
+function ValuePickerValue({ value, checked, clickHandler}) {
+    return (
+        <div className="flex items-center gap-2 bg-fem-neutral-800" onClick={()=>clickHandler(value)}>
+            <ValuePickerCheckmark checked={checked} />
+            <p>{value.label}</p>
+        </div>
+    );
+}
 
 function ValuePickerCheckmark({ checked = false }) {
     return (
@@ -46,19 +54,4 @@ function ValuePickerCheckmark({ checked = false }) {
             {checked ? <div className="rounded-full bg-black w-[40%] h-[40%]"></div> : null}
         </div>
     )
-}
-
-function ValuePickerLabel({ text }) {
-    return (
-        <p>{text}</p>
-    )
-}
-
-function ValuePickerValue({ text, checked, clickHandler}) {
-    return (
-        <div className="flex items-center gap-2 bg-fem-neutral-800" onClick={()=>clickHandler(text)}>
-            <ValuePickerCheckmark checked={checked} />
-            <ValuePickerLabel text={text} />
-        </div>
-    );
 }
