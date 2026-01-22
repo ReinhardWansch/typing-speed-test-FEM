@@ -13,8 +13,7 @@ function Header({pb}) {
             <div id="bestHeaderCtn" className="flex items-center gap-2">
                 <img src={iconPersonalBest} alt="cup-icon" className="inline-block" />
                 <span className="text-fem-neutral-500">
-                    <span className="hidden lg:inline">Personal</span>
-                    Best:
+                    <span className="hidden lg:inline">Personal</span> Best:
                 </span>
                 <span className="font-bold text-lg">{pb} WPM</span>
             </div>

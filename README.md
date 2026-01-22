@@ -1,12 +1,12 @@
 # TuEs
 
-- React-Komponente Results Screen
+- mit useState alles machen
+- bei jedem useState-Hook entscheiden, ob es einen besseren Hook dafür gibt
 
-## Brainstorm
+# Brainstorm
 
 - User kommt auf Seite
 - PB wird angezeigt (**PB laden**)
-  - wenn kein PB, Unendlich Zeichen
 - Schwierigkeitsgrad aussuchen
   - Passende Passage wird im Typing Feld angezeigt (**Passage laden**)
 - Modus aussuchen
@@ -26,11 +26,20 @@
   - Wenn PB: Highscore neu laden (damit im Header das aktuelle PB angezeigt wird)
   - Icon, Text und Decals anhand von Highscores anzeigen
 
+# Komponenten
+
+- App: *PB, WPM, Accuracy, Time, Gamemode, Gamestatus*
+- GameScreen
+  - Header
+  - InfoBar
+    - StatsCtn
+    - ControlsCtn
+  - TypingInput
+- ResultScreen
 
 
 
-
----
+---------------------------------
 
 # Frontend Mentor - Typing Speed Test
 
