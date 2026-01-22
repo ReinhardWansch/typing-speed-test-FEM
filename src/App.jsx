@@ -3,10 +3,14 @@ import settings from "./settings.js"
 import GameScreen from "./components/GameScreen.jsx"
 import ResultScreen from "./components/ResultScreen.jsx"
 
+
+// Data
+const DATA= settings.DATA
 // Game States
 const NOT_STARTED = settings.GAME_STATES.NOT_STARTED
 const STARTED = settings.GAME_STATES.STARTED
 const RESULTS = settings.GAME_STATES.RESULTS
+
 
 /*#########*/
 /*## APP ##*/
