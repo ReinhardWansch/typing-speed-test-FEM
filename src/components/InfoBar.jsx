@@ -4,11 +4,9 @@ import StatValueGamescreen from "./StatValueGamescreen"
 import ValuePicker from "./ValuePicker.jsx"
 import ValuePickerDesktop from "./ValuePickerDesktop.jsx"
 
-// Difficulty Levels
 const DIFFICULTY_LEVELS = settings.DIFFICULTY_LEVELS
-const EASY= settings.DIFFICULTY_LEVELS.EASY
-const MEDIUM= settings.DIFFICULTY_LEVELS.MEDIUM
-const HARD= settings.DIFFICULTY_LEVELS.HARD
+const GAME_MODES = settings.GAME_MODES
+
 
 export default function InfoBar({ wpm, accuracy, time }) {
     return (
@@ -25,9 +23,9 @@ export default function InfoBar({ wpm, accuracy, time }) {
             <div id="controlsCtn" className="flex justify-center items-center gap-5">
                 <ValuePicker className="lg:hidden" values={Object.values(DIFFICULTY_LEVELS)} />
                 <ValuePickerDesktop className="hidden lg:flex" values={Object.values(DIFFICULTY_LEVELS)} />
-                
-                <ValuePicker values={["Timed", "Passage"]} />
 
+                <ValuePicker className="lg:hidden" values={Object.values(GAME_MODES)} />
+                <ValuePickerDesktop className="hidden lg:flex" values={Object.values(GAME_MODES)} />
             </div>
         </div>
     )
