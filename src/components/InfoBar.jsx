@@ -15,8 +15,8 @@ export default function InfoBar({ wpm, accuracy, time }) {
             {/****** Stats Ctn ******/}
             <div id="statsCtn" className="flex justify-around items-center gap-5">
                 <StatValueGamescreen name="WPM:" value={wpm} color="fem-neutral-0" />
-                <StatValueGamescreen name="Accuracy:" value={accuracy} color="fem-neutral-0" />
-                <StatValueGamescreen name="Time:" value={time} color="fem-neutral-0" />
+                <StatValueGamescreen name="Accuracy:" value={accuracy} color="fem-red-500" />
+                <StatValueGamescreen name="Time:" value={time} color="fem-yellow-400" />
             </div>
 
             {/****** Controls Ctn ******/}

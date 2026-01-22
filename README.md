@@ -1,7 +1,6 @@
 # TuEs
 
-- mit useState alles machen
-- bei jedem useState-Hook entscheiden, ob es einen besseren Hook dafür gibt
+- TypingInput ad GameSreen *aktuell*
 
 # Brainstorm
 

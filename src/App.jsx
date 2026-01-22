@@ -20,7 +20,7 @@ function App() {
 
   return (
     <>
-      {gameState != RESULTS && <GameScreen wpm={wpm} accuracy={accuracy} time={time} />}
+      {gameState != RESULTS && <GameScreen gameState={gameState} wpm={wpm} accuracy={accuracy} time={time} />}
       {gameState == RESULTS && <ResultScreen />}
     </>
   )
