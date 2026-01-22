@@ -29,7 +29,7 @@ export default function ValuePicker({ values, className = "" }) {
                 className={collapsed ? 'hidden' :
                     'flex flex-col rounded-md w-full bg-fem-neutral-800 divide-y divide-neutral-700 absolute'}>
                 {values.map(valueI =>
-                    <ValuePickerValue text={valueI} checked={selectedValue === valueI} clickHandler={setSelectedValue} key={valueI} />
+                    <ValuePickerValue value={valueI} checked={selectedValue === valueI} clickHandler={setSelectedValue} key={valueI.value} />
                 )}
             </div>
         </div>
