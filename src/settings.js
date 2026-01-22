@@ -7,9 +7,9 @@ export default {
     },
 
     DIFFICULTY_LEVELS: {
-        EASY: 0,
-        MEDIUM: 1,
-        HARD: 2
+        EASY: { value: 0, label: "Easy" },
+        MEDIUM: { value: 1, label: "Medium" },
+        HARD: { value: 2, label: "Hard" }
     },
 
     MODES: {

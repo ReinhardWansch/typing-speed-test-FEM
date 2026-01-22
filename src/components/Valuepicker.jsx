@@ -54,7 +54,7 @@ function ValuePickerLabel({ text }) {
     )
 }
 
-function ValuePickerValue({text, checked, clickHandler}) {
+function ValuePickerValue({ text, checked, clickHandler}) {
     return (
         <div className="flex items-center gap-2 bg-fem-neutral-800" onClick={()=>clickHandler(text)}>
             <ValuePickerCheckmark checked={checked} />
