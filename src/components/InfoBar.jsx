@@ -8,7 +8,7 @@ const DIFFICULTY_LEVELS = settings.DIFFICULTY_LEVELS
 const GAME_MODES = settings.GAME_MODES
 
 
-export default function InfoBar({ wpm, accuracy, time }) {
+export default function InfoBar({ difficulty, onDifficultyChange, wpm, accuracy, time }) {
     return (
         <div id="infoBar" className="pt-10 pb-2 flex flex-col lg:flex-row lg:justify-between gap-1">
 
@@ -21,11 +21,11 @@ export default function InfoBar({ wpm, accuracy, time }) {
 
             {/****** Controls Ctn ******/}
             <div id="controlsCtn" className="flex justify-center items-center gap-5">
-                <ValuePicker className="lg:hidden" values={Object.values(DIFFICULTY_LEVELS)} />
+                <ValuePicker className="lg:hidden" values={Object.values(DIFFICULTY_LEVELS)} currentValue={difficulty} onChange={onDifficultyChange} />
                 <ValuePickerDesktop className="hidden lg:flex" values={Object.values(DIFFICULTY_LEVELS)} />
 
-                <ValuePicker className="lg:hidden" values={Object.values(GAME_MODES)} />
-                <ValuePickerDesktop className="hidden lg:flex" values={Object.values(GAME_MODES)} />
+                {/* <ValuePicker className="lg:hidden" values={Object.values(GAME_MODES)} /> */}
+                {/* <ValuePickerDesktop className="hidden lg:flex" values={Object.values(GAME_MODES)}/> */}
             </div>
         </div>
     )

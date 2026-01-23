@@ -9,9 +9,9 @@ export default {
     },
 
     DIFFICULTY_LEVELS: {
-        EASY: { value: 0, label: "Easy" },
-        MEDIUM: { value: 1, label: "Medium" },
-        HARD: { value: 2, label: "Hard" }
+        EASY: { value: 0, label: "Easy", dataAttribute: "easy"},
+        MEDIUM: { value: 1, label: "Medium", dataAttribute: "medium" },
+        HARD: { value: 2, label: "Hard", dataAttribute: "hard" }
     },
 
     GAME_MODES: {

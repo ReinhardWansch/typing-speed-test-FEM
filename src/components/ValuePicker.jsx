@@ -2,9 +2,8 @@ import settings from '../settings.js';
 import { useEffect, useRef, useState } from "react";
 import iconDownArrow from '/src/assets/images/icon-down-arrow.svg';
 
-export default function ValuePicker({ values, className = "" }) {
+export default function ValuePicker({ values , currentValue, onChange, className = "" }) {
     const [collapsed, setCollapsed] = useState(true);
-    const [selectedValue, setSelectedValue] = useState(values[0]);
     const dropdownRef = useRef(null);
 
     useEffect(() => {
@@ -21,7 +20,7 @@ export default function ValuePicker({ values, className = "" }) {
         <div ref={dropdownRef} className={`relative flex-1 text-center ${className}`}>
             <p onClick={() => setCollapsed(!collapsed)}
                 className="border border-fem-neutral-400 rounded-md">
-                {selectedValue.label}
+                {currentValue.label}
                 <img src={iconDownArrow} alt="downarrow"
                     className={`inline ${collapsed ? 'pl-2' : 'rotate-180 pr-2'}`} />
             </p>
@@ -29,7 +28,7 @@ export default function ValuePicker({ values, className = "" }) {
                 className={collapsed ? 'hidden' :
                     'flex flex-col rounded-md w-full bg-fem-neutral-800 divide-y divide-neutral-700 absolute z-10'}>
                 {values.map(valueI =>
-                    <ValuePickerValue value={valueI} checked={selectedValue === valueI} clickHandler={setSelectedValue} key={valueI.value} />
+                    <ValuePickerValue value={valueI} checked={currentValue === valueI} onClick={onChange} key={valueI.value} />
                 )}
             </div>
         </div>
@@ -37,9 +36,9 @@ export default function ValuePicker({ values, className = "" }) {
 }
 
 
-function ValuePickerValue({ value, checked, clickHandler }) {
+function ValuePickerValue({ value, checked, onClick }) {
     return (
-        <div className="flex items-center gap-2 bg-fem-neutral-800" onClick={() => clickHandler(value)}>
+        <div className="flex items-center gap-2 bg-fem-neutral-800" onClick={() => onClick(value)}>
             <ValuePickerCheckmark checked={checked} />
             <p>{value.label}</p>
         </div>
