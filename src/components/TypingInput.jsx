@@ -20,7 +20,7 @@ export default function TypingInput({ gameState, onGameStart, difficulty, diffic
     }
 
     return (
-        <div className="absolute">
+        <div className="relative">
             {/************** Main Input Area **************/}
             <div className={`text-3xl ${gameState === GAME_STATES.NOT_STARTED ? "blur-sm" : ""}`}>
                 {typedText.split('').map((char, index) => (
