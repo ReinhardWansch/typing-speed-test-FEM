@@ -22,10 +22,10 @@ export default function InfoBar({ difficulty, onDifficultyChange, wpm, accuracy,
             {/****** Controls Ctn ******/}
             <div id="controlsCtn" className="flex justify-center items-center gap-5">
                 <ValuePicker className="lg:hidden" values={Object.values(DIFFICULTY_LEVELS)} currentValue={difficulty} onChange={onDifficultyChange} />
-                <ValuePickerDesktop className="hidden lg:flex" values={Object.values(DIFFICULTY_LEVELS)} />
+                <ValuePickerDesktop className="hidden lg:flex" values={Object.values(DIFFICULTY_LEVELS)} onChange={onDifficultyChange} currentValue={difficulty} />
 
-                {/* <ValuePicker className="lg:hidden" values={Object.values(GAME_MODES)} /> */}
-                {/* <ValuePickerDesktop className="hidden lg:flex" values={Object.values(GAME_MODES)}/> */}
+                {/* <ValuePicker className="lg:hidden" values={Object.values(GAME_MODES)} />
+                <ValuePickerDesktop className="hidden lg:flex" values={Object.values(GAME_MODES)}/> */}
             </div>
         </div>
     )

@@ -22,7 +22,7 @@ export default function TypingInput({ gameState, onGameStart, difficulty, diffic
     return (
         <div className="absolute">
             {/************** Main Input Area **************/}
-            <div className={`text-xl ${gameState === GAME_STATES.NOT_STARTED ? "blur-sm" : ""}`}>
+            <div className={`text-3xl ${gameState === GAME_STATES.NOT_STARTED ? "blur-sm" : ""}`}>
                 {typedText.split('').map((char, index) => (
                     <TypingChar key={index} className={typoIndices.includes(index) ? TYPO_STYLE : TYPED_STYLE}>
                         {char}

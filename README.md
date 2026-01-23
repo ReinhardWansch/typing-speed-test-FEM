@@ -1,7 +1,7 @@
 # TuEs
 
-- Bei Start: Zufällige Passage (nach Schwierigkeitsgrad) laden *aktuell*
-- Bei Schwierigkeits-Änderung: Neue Passage laden
+- Bei Start: Zufällige Passage (nach Schwierigkeitsgrad)
+- Bei Schwierigkeits-Änderung: Neue Passage laden *aktuell*
 - Spielstart
   - Bei Gamemode "Timed" Timer starten
 - Spielende
