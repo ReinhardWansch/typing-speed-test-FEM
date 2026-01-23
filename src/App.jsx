@@ -39,6 +39,7 @@ function App() {
     <>
       {gameState != RESULTS && <GameScreen
         gameState={gameState}
+        onGameStart={setGameState}
         difficulty={difficulty}
         onDifficultyChange={setDifficulty}
         currentPassage={currentPassage}
