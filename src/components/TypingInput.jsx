@@ -15,7 +15,6 @@ export default function TypingInput({ gameState, onGameStart, difficulty, diffic
     const remainingText = text.slice(currentCharIndex + 1);
 
     function startGame() {
-        console.log("Game started"); ///DEBUG
         onGameStart(settings.GAME_STATES.STARTED);
     }
 

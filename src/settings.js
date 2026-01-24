@@ -1,6 +1,6 @@
 
 export default {
-    DATA: await fetch('/public/data.json').then(res => res.json()),
+    DATA: await fetch('/data.json').then(res => res.json()),
 
     GAME_STATES: {
         NOT_STARTED: 0,

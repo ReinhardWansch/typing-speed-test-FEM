@@ -1,9 +1,8 @@
 # TuEs
 
-- Bei Start: Zufällige Passage (nach Schwierigkeitsgrad)
-- Bei Schwierigkeits-Änderung: Neue Passage laden *aktuell*
 - Spielstart
   - Bei Gamemode "Timed" Timer starten
+  - Restart-Button anzeigen
 - Spielende
 - Restart Button in GameScreen
 

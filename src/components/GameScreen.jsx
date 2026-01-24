@@ -24,7 +24,8 @@ export default function GameScreen({
                 onGameModeChange={onGameModeChange} 
                 wpm={wpm} 
                 accuracy={accuracy} 
-                time={time} />
+                time={time}
+                gameState={gameState} />
             <TypingInput 
                 gameState={gameState} 
                 onGameStart={onGameStart} 

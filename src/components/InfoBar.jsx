@@ -8,7 +8,16 @@ const DIFFICULTY_LEVELS = settings.DIFFICULTY_LEVELS
 const GAME_MODES = settings.GAME_MODES
 
 
-export default function InfoBar({ difficulty, onDifficultyChange, gameMode, onGameModeChange, wpm, accuracy, time }) {
+export default function InfoBar({ 
+    difficulty, 
+    onDifficultyChange, 
+    gameMode, 
+    onGameModeChange, 
+    wpm, 
+    accuracy, 
+    time,
+    gameState }) {
+
     return (
         <div id="infoBar" className="pt-10 pb-2 flex flex-col lg:flex-row lg:justify-between gap-1">
 
@@ -21,11 +30,31 @@ export default function InfoBar({ difficulty, onDifficultyChange, gameMode, onGa
 
             {/****** Controls Ctn ******/}
             <div id="controlsCtn" className="flex justify-center items-center gap-5">
-                <ValuePicker className="lg:hidden" values={Object.values(DIFFICULTY_LEVELS)} currentValue={difficulty} onChange={onDifficultyChange} />
-                <ValuePickerDesktop className="hidden lg:flex" values={Object.values(DIFFICULTY_LEVELS)} onChange={onDifficultyChange} currentValue={difficulty} />
+                <ValuePicker 
+                    className="lg:hidden"
+                    values={Object.values(DIFFICULTY_LEVELS)} 
+                    currentValue={difficulty} 
+                    onChange={onDifficultyChange} 
+                    gameState={gameState} />
+                <ValuePickerDesktop
+                    className="hidden lg:flex"
+                    values={Object.values(DIFFICULTY_LEVELS)}
+                    onChange={onDifficultyChange}
+                    currentValue={difficulty} 
+                    gameState={gameState} />
 
-                <ValuePicker className="lg:hidden" values={Object.values(GAME_MODES)} currentValue={gameMode} onChange={onGameModeChange} />
-                <ValuePickerDesktop className="hidden lg:flex" values={Object.values(GAME_MODES)} onChange={onGameModeChange} currentValue={gameMode} />
+                <ValuePicker 
+                    className="lg:hidden"
+                    values={Object.values(GAME_MODES)} 
+                    currentValue={gameMode} 
+                    onChange={onGameModeChange} 
+                    gameState={gameState} />
+                <ValuePickerDesktop 
+                    className="hidden lg:flex" 
+                    values={Object.values(GAME_MODES)} 
+                    onChange={onGameModeChange} 
+                    currentValue={gameMode} 
+                    gameState={gameState} />
             </div>
         </div>
     )

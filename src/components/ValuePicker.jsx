@@ -2,7 +2,18 @@ import settings from '../settings.js';
 import { useEffect, useRef, useState } from "react";
 import iconDownArrow from '/src/assets/images/icon-down-arrow.svg';
 
-export default function ValuePicker({ values , currentValue, onChange, className = "" }) {
+const GAME_STATES = settings.GAME_STATES;
+
+const ACTIVE_STYLE= "border border-fem-neutral-400 rounded-md"
+const STARTED_STYLE= "border border-neutral-600 text-neutral-600 rounded-md"
+
+export default function ValuePicker({
+    values,
+    currentValue,
+    onChange,
+    gameState,
+    className = "" }) {
+
     const [collapsed, setCollapsed] = useState(true);
     const dropdownRef = useRef(null);
 
@@ -18,8 +29,8 @@ export default function ValuePicker({ values , currentValue, onChange, className
 
     return (
         <div ref={dropdownRef} className={`relative flex-1 text-center ${className}`}>
-            <p onClick={() => setCollapsed(!collapsed)}
-                className="border border-fem-neutral-400 rounded-md">
+            <p onClick={() => { if (gameState == GAME_STATES.NOT_STARTED) setCollapsed(!collapsed) }}
+                className={gameState == GAME_STATES.NOT_STARTED ? ACTIVE_STYLE : STARTED_STYLE}>
                 {currentValue.label}
                 <img src={iconDownArrow} alt="downarrow"
                     className={`inline ${collapsed ? 'pl-2' : 'rotate-180 pr-2'}`} />
